@@ -1,0 +1,70 @@
+% --------------------------------------------------------------
+% This is all preamble stuff that you don't have to worry about.
+% Head down to where it says "Start here"
+% --------------------------------------------------------------
+
+\documentclass[12pt]{article}
+
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amsthm,amssymb}
+	\newcounter{question}
+		\usepackage{lipsum}
+\setcounter{question}{0}
+
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+
+\newenvironment{theorem}[2][Theorem]{\begin{trivlist}
+		\item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+\newenvironment{lemma}[2][Lemma]{\begin{trivlist}
+		\item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+\newenvironment{exercise}[2][Exercise]{\begin{trivlist}
+		\item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+\newenvironment{problem}[2][Problem]{\begin{trivlist}
+		\item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+\newenvironment{question}[2][Question]{\begin{trivlist}
+		\item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+\newenvironment{corollary}[2][Corollary]{\begin{trivlist}
+		\item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+
+\begin{document}
+
+	
+	\title{PHOTODIODES}%replace X with the appropriate number
+	\author{Lauren Hernandez\\ %replace with your name
+		Advanced Lab Seminar, Physics 3110} %if necessary, replace with your course title
+	
+	\maketitle
+	
+
+
+		
+		\newcommand\Que[1]{%
+			\leavevmode\par
+			\stepcounter{question}
+			\noindent
+			\thequestion. Q --- #1\par}
+		
+		\newcommand\Ans[2][]{%
+			\leavevmode\par\noindent
+			{\leftskip37pt
+				A --- \textbf{#1}#2\par}}
+		
+		\Que{What is a photodiode?}
+		\Ans{A photodiode is a semiconductor that absorbs photons and produces a current by means of the photoelectric effect. A photodiode is a tool that reveals information about the intensity of the light that which is shone upon it; the intensity of light is directly proportional  to the magnitude of the current produced. }
+		
+		\Que{What is the history of the photodiode?}
+		\Ans{The photodiode was invented by Dr. John N. Shive in 1948 at Bell Laboratory. The photodiode was a byproduct of Dr. Shive's experimental, and inventive work on the transistor, and phototransistors.}
+		
+		\Que{What are the uses of a photodiode?}
+		\Ans{The photodide has wide reaching applications and is used in inumerable modern-day tools, and every-day household devices. Photodiodes can be found in smoke detectors, by detecting a change in light intensity when smoke arises; they are found in automatic street lights, turning on when the intensity of sunlight dwindles as sunset occurs; they are present in computed tomography, by facilitating the digital processing of information carrying electromagnetic radiation; and they are the main functioning component in solar pannels. }
+		
+		\Que{How does a photodiode work?}
+		\Ans{A photodiode utilizes the union of two semiconductor materials, one which is slightly negative, referred to as the N-type, and one which is slightly positive, which is referred to as the P-type. At the junction of these two semiconductors, a discinct positive and negative ion boundary will naturally form, this is called the depletion region. If light of sufficient intensity is shone onto the depletion region, an electron will jump from the valence band of the semiconductor to the concduction band of the semiconductor, by means of the photoelectric effect. Since this electron-hole pair is occurring in the distinct ionized region of the photodiode, the electron will be repelled by the positive region, and will accelerate down the circuit producing a current. The circuit is set up in reverse bias, P-type to the negative terminal and the N-type to the positive terminal in order to encourage the widening of the depletion region as light shines on the depletion region over time. }
+		
+		\Que{How do you operate a photodiode?}
+		\Ans{In order to use a photodiode, you need a photodiode, equipment for a circuit to travel along (wires), a resistor so the photodiode isn't destroyed, and an optional battery. It is recommended to set up the circuit in reverse bias in order to maximize the efficiency of the system. If a battery is not chosen, the system will be considered to be in photovoltaic mode (this is the set-up for solar pannels). If a battery is chosen, the system will be considered to be in photoconductive mode. When in photoconductive mode, if the circuit is closed, a current will be produced when light is shone onto the photodiode; if the circuit is open, a potential difference, or a voltage, will be collected as light is shone onto the photodiode. The decision to set up the circuit as closed or open depends on the data in which you would like to gather. }
+	\end{document}
+
+	
+\end{document}

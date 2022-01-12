@@ -1,0 +1,284 @@
+\documentclass[14pt]{beamer}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{xcolor}
+\usepackage[absolute,overlay]{textpos}
+\usepackage{wrapfig}
+\usetheme{CambridgeUS}
+\newcommand{\putat}[3]{\begin{picture}(0,0)(0,0)\put(#1,#2){#3}\end{picture}}
+\logo{\includegraphics[width=20mm]{u-houston-logo.png}}
+\title{PHOTODIODES}
+\author{LAUREN HERNANDEZ}
+
+\medskip
+
+\begin{document}
+
+%      Title Page
+% -------------------------------
+
+
+\begin{frame}
+\titlepage
+\end{frame}
+
+
+%      Table of Contents 
+% ------------------------------
+	
+\begin{frame}{OVERVIEW}
+\tableofcontents
+
+\begin{flushleft}
+\begin{itemize}
+	\item What is a photodiode?
+	\vspace{5mm}
+	\item History
+	\vspace{5mm}
+	\item Various uses
+	\vspace{5mm}
+	\item How does it work?
+	\vspace{5mm}
+	\item How do you operate it?
+	\vspace{5mm}
+	\item Conclusion
+\end{itemize}
+\end{flushleft}
+\end{frame}
+
+
+%      What is a Photodiode
+% ------------------------------
+\begin{frame}
+	
+	\frametitle{WHAT IS A PHOTODIODE}
+	\begin{flushleft}
+	\begin{list}{--}{}
+		\item semiconductor
+		\item light $\rightarrow$ electricity
+		\item detect light intensity
+	\end{list}
+	\end{flushleft}	
+	\vspace{5mm}
+	\begin{figure}[H]
+	\begin{flushleft}
+	\includegraphics[width=70mm]{Introduction-to-Photodiode.jpeg}
+	\end{flushleft}
+	\end{figure}
+
+\begin{textblock*}{6cm}(7cm,2cm) % {block width} (coords)
+	\includegraphics[width=5.5cm]{light1.jpeg}
+\end{textblock*}
+
+\begin{textblock*}{3cm}(7.5cm,6.5cm) % {block width} (coords)
+	\includegraphics[width=3cm]{diode.jpeg}
+\end{textblock*}
+
+\begin{textblock*}{3cm}(9cm,4.5cm) % {block width} (coords)
+	\includegraphics[width=3cm]{electricity.jpeg}
+\end{textblock*}
+	
+\end{frame}
+
+
+
+% Brief History of the Photodiode
+% ----------------------------------
+\begin{frame}{BRIEF HISTORY}
+	
+		\begin{flushleft}
+		\begin{list}{--}{}
+			\item Dr. John N. Shive
+			\item Bell Labs, 1948
+			\item Nobel for transistor
+		\end{list}
+	\end{flushleft}
+
+	\begin{figure}[H]
+	\begin{flushleft}
+		\includegraphics[width=59mm]{bell labs.jpeg}
+	\end{flushleft}
+\end{figure}
+
+\begin{textblock*}{3cm}(6.5cm,1.75cm) % {block width} (coords)
+	\includegraphics[width=3.cm]{John.jpeg}
+\end{textblock*}
+
+\begin{textblock*}{3cm}(9.75cm,1.75cm) % {block width} (coords)
+	\includegraphics[width=3cm]{bell.jpeg}
+\end{textblock*}
+
+\begin{textblock*}{3cm}(6.75cm,5.75cm) % {block width} (coords)
+	\includegraphics[width=3.5cm]{transistor.jpeg}
+\end{textblock*}	
+	
+
+
+
+\end{frame}
+
+%   What are the uses of a Photodiode
+% ------------------------------
+\begin{frame}{VARIOUS USES}
+	
+		\begin{figure}[H]
+		\begin{flushleft}
+			\includegraphics[width=45mm]{lights.png}
+		\end{flushleft}
+	\end{figure}
+
+	\begin{textblock*}{3cm}(5.45cm,1.75cm) % {block width} (coords)
+	\includegraphics[width=2.75cm]{smoke.jpeg}
+\end{textblock*}
+
+	\begin{textblock*}{3cm}(8.5cm,1.75cm) % {block width} (coords)
+	\includegraphics[width=4cm]{xray.jpeg}
+\end{textblock*}
+	
+		\begin{figure}[H]
+		\begin{flushleft}
+			\includegraphics[width=77mm]{solar cell.jpeg}
+		\end{flushleft}
+	\end{figure}
+	
+\end{frame}
+
+%   How does a Photodiode actually work
+% ------------------------------
+\begin{frame}{HOW DOES IT WORK?}
+	
+		\begin{textblock*}{4cm}(.1cm,1.75cm) % {block width} (coords)
+		\includegraphics[width=6cm]{photoelectric.png}
+	\end{textblock*}
+
+		\begin{textblock*}{4cm}(.01cm,5cm) % {block width} (coords)
+	\includegraphics[width=5cm]{pn diagram.png}
+\end{textblock*}
+	
+			\begin{textblock*}{4cm}(5.5cm,3cm) % {block width} (coords)
+		\includegraphics[width=6.75cm]{image.png}
+	\end{textblock*}
+\end{frame}
+
+%   How does a Photodiode actually work
+% ------------------------------
+\begin{frame}{HOW DOES IT WORK?}
+	
+			\begin{flushleft}
+		\begin{list}{--}{}
+			\item PN 
+			\item PIN
+			\item Avalanche
+			\item Schottky 
+		\end{list}
+	\end{flushleft}	
+	\vspace{5mm}
+	
+	\begin{figure}[H]
+		\begin{flushleft}
+			\includegraphics[width=77mm]{explanation-of-photodiodes.jpeg}
+		\end{flushleft}
+	\end{figure}
+	
+	\begin{textblock*}{4cm}(6.5cm,1.5cm) % {block width} (coords)
+		\includegraphics[width=6cm]{pn.jpeg}
+	\end{textblock*}
+	
+\end{frame}
+
+
+%   How does it work?
+% ------------------------------
+\begin{frame}{HOW DOES IT WORK?}
+		
+		\begin{flushleft}
+		\quad \quad	\underline{PERFORMANCE PARAMETERS}
+		\vspace{3mm}
+		\begin{list}{-}{}
+			\item Responsivity = $\frac{\text{generated photocurrent}}{\text{light intensity}}$
+			\vspace{1mm}
+			\item Quantum efficiency = $\frac{\text{electron hole pairs}}{\text{incident photons}}$
+			\vspace{1mm}
+			\item Response time 
+ 
+		\end{list}
+	\end{flushleft}	
+	\vspace{5mm}
+	
+\end{frame}
+
+
+
+%   How do you operate, put it into action?
+% ------------------------------
+\begin{frame}{HOW DO YOU OPERATE IT?}
+	
+		\begin{flushleft}
+		\begin{list}{--}{}
+			\item Light 
+			\item Circuit 
+			\item Photoconductive mode
+			\item Photovoltaic mode 
+		\end{list}
+	\end{flushleft}	
+
+	\begin{figure}[H]
+	\begin{flushleft}
+		\includegraphics[width=85mm]{images.png}
+	\end{flushleft}
+\end{figure}
+	
+\end{frame}
+
+
+%   Slide
+% ------------------------------
+\begin{frame}{CONCLUDING THOUGHTS}
+	
+			\begin{flushleft}
+		\begin{list}{--}{}
+			\item Turn photons into current
+			\item Invented alongside transistors
+			\item Wide variety of uses
+			\item Can be adjusted for effeciency
+			\item Can produce voltage or current
+		\end{list}
+	\end{flushleft}	
+	
+		\begin{figure}[H]
+		\begin{flushleft}
+			\includegraphics[width=85mm]{conclusion.jpeg}
+		\end{flushleft}
+	\end{figure}
+	
+\end{frame}
+
+
+
+%   Slide
+% ------------------------------
+\begin{frame}{REFERENCES}
+	
+	\begin{flushleft}
+		\begin{list}{--}{}
+			
+	\item \scriptsize{Photodiode operation, types and applications. ElectricalMag. (2020, August 22). Retrieved October 19, 2021, from \color{blue}{https://electricalmag.com/photodiode/. }}
+	
+	\item \scriptsize{TUFAN, B. H. (2020, May 10). Explanation of photodiodes. Thecodeprogram. Retrieved October 19, 2021, \color{blue}{from https://thecodeprogram.com/explanation-of-photodiodes. }}
+	
+	\item \scriptsize{P-n junction. The P-N Junction. (n.d.). Retrieved October 19, 2021, from \color{blue}{http://hyperphysics.phy-astr.gsu.edu/hbase/Solids/pnjun.html. }}
+	
+	\item \scriptsize{Department of Chemistry | UCI Department of Chemistry. (n.d.). Retrieved October 19, 2021, from \color{blue}{https://www.chem.uci.edu/~unicorn/243/handouts/photodiode.pdf. }}
+	
+	\item \scriptsize{YouTube. (2020, December 11). Photodiodes - (Working \&amp; Why it's reverse biased) | semiconductors | physics | khan academy. YouTube. Retrieved October 19, 2021, from \color{blue}{https://www.youtube.com/watch?v=KgKcbW77txY. } }
+	
+	\vspace{10mm}
+	\end{list}
+	\end{flushleft}
+\end{frame}
+
+
+
+
+
+\end{document}

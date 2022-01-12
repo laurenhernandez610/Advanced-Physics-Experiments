@@ -1,0 +1,295 @@
+\documentclass[twoside,10pt]{article}
+
+\usepackage{lipsum,booktabs}
+\usepackage[super]{natbib}
+\usepackage{lipsum} % Package to generate dummy text throughout this template
+\usepackage[sc]{mathpazo} % Use the Palatino font
+\usepackage[T1]{fontenc} % Use 8-bit encoding that has 256 glyphs
+\linespread{1.00} % Line spacing - Palatino needs more space between lines
+\usepackage{microtype} % Slightly tweak font spacing for aesthetics
+\usepackage{derivative}
+\usepackage[hmarginratio=1:1,top=32mm,columnsep=20pt]{geometry} % Document margins
+\usepackage{multicol} % Used for the two-column layout of the document
+\usepackage[hang, small,labelfont=bf,up,textfont=it,up]{caption} % Custom captions under/above floats in tables or figures
+\usepackage{booktabs} % Horizontal rules in tables
+\usepackage{float} % Required for tables and figures in the multi-column environment - they need to be placed in specific locations with the [H] (e.g. \begin{table}[H])
+\usepackage{hyperref} % For hyperlinks in the PDF
+\usepackage{multirow}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{lettrine} % The lettrine is the first enlarged letter at the beginning of the text
+\usepackage{paralist} % Used for the compactitem environment which makes bullet points with less space between them
+
+\usepackage{abstract} % Allows abstract customization
+\renewcommand{\abstractnamefont}{\normalfont\bfseries} % Set the "Abstract" text to bold
+\renewcommand{\abstracttextfont}{\normalfont\small\itshape} % Set the abstract itself to small italic text
+
+\usepackage{titlesec} % Allows customization of titles
+\renewcommand\thesection{\Roman{section}} % Roman numerals for the sections
+\renewcommand\thesubsection{\Roman{subsection}} % Roman numerals for subsections
+\titleformat{\section}[block]{\large\scshape\centering}{\thesection.}{1em}{} % Change the look of the section titles
+\titleformat{\subsection}[block]{\large}{\thesubsection.}{1em}{} % Change the look of the section titles
+
+\usepackage{fancyhdr} % Headers and footers
+\pagestyle{fancy} % All pages have headers and footers
+\fancyhead{} % Blank out the default header
+\fancyfoot{} % Blank out the default footer
+\fancyhead[C]{Accuracy and Precision in Measurement and Error Analysis $\bullet$ September 12, 2021 } % Custom header text
+\fancyfoot[RO,LE]{\thepage} % Custom footer text
+
+
+%----------------------------------------------------------------------------------------
+%	TITLE SECTION
+%----------------------------------------------------------------------------------------
+
+\title{\vspace{-15mm}\fontsize{15pt}{10pt}\selectfont\textbf{Accuracy and Precision in Measurement and Error Analysis}} % Article title
+
+\author{
+	\small
+	\textsc{Lauren Hernandez, Kathryn Wong}\\[1mm] % Your name
+	\normalsize \textit{University of Houston}\\ % Your institution
+	\normalsize \textit{Physics 3313: Advanced Laboratory I}\\ % Your Course
+%	\normalsize \href{mailto:john@smith.com}{john@smith.com} % Your email address
+	\vspace{-10mm}
+}
+\date{}
+
+%----------------------------------------------------------------------------------------
+
+\begin{document}
+	
+	\maketitle % Insert title
+	
+	\thispagestyle{fancy} % All pages have headers and footers
+	
+	%----------------------------------------------------------------------------------------
+	%	ABSTRACT
+	%----------------------------------------------------------------------------------------
+	
+	\begin{abstract}
+		
+		\noindent The motivation for this experiment is to gain familiarity with tools that are commonplace in a physics laboratory and establish an understanding of the error associated with each tool. The density of an aluminum bar was measured to be 2.73 $\pm$ 0.002 $g/cm^3$ with a Vernier Caliper and 2.79 $\pm$ 0.021 $g/cm^3$ with a micrometer. The current and resistance of a circuit were measured to be 0.05 $\pm$ 0.01 A, 100 $\pm$ 0.01 $\Omega$ with a multimeter. The voltage and frequency of a signal generator were measured to be 2.112 $\pm$ 0.001 V,100 $\pm$ $1 \times10^4$ Hz with an oscilloscope. 
+		
+	\end{abstract}
+	
+	%----------------------------------------------------------------------------------------
+	%	INTRODUCTION
+	%----------------------------------------------------------------------------------------
+	
+	\begin{multicols}{2} % Two-column layout throughout the main article text
+		
+		\section{Introduction}
+		
+		\lettrine[nindent=0em,lines=2]{T} he motivation for an experiment in measurement and error analysis is to instill familiarity with the measurement tools that are commonplace in a physics laboratory and to establish a concrete understanding of the subsequent error that is inherently unique to the use of each measurement tool. The error associated with various measurement tools is a non-trivial component in experimental science that has the potential to render a calculation insightful, or utterly insignificant. Thus, as an experiment propels itself forward, the error compounds and the propogation of error becomes the quantity of concern relative to a sound conclusion. The propogation of error of a multivariable function of measured values can be determined as follows: 
+		
+		\begin{small}
+		 \begin{equation}
+		 	\delta f = \sqrt{\left( \pdv{f}{x} \hspace{.5mm}\delta x\right)^2 + \left( \pdv{f}{y} \hspace{.5mm} \delta y\right)^2 + \left( \pdv{f}{z} \hspace{.5mm} \delta z\right)^2} ,
+		 \end{equation}
+		\end{small}
+	
+		\noindent where the error associated with each variable $f(x,y,z)$ is $\delta(x,y,z)$. Additionally, it can be informative to compare two similar values in order to quantify the error of a  calculated, or measured, value. The error in a single measurement can be represented as a percentage error, or as a percentage difference: 
+		
+		\begin{small}
+		\begin{equation}
+		\textnormal{percentage error} = \frac{| x_{calc} - x_{accept}|}{x_{accept}} * 100 \% 
+		\end{equation}
+		\end{small}
+	
+		\begin{small}
+		\begin{equation}
+		\textnormal{percentage difference} = \frac{| x_{1} - x_{2}|}{|x_1 + x_2|/2} * 100 \% 
+		\end{equation}
+		\end{small}
+		
+		\indent Throughout the measurement and error analysis experiment, equation (1), (2) and (3) will be used to evaluate the error associated with various values. In part one of the experiment, these equations will be used to evaluate the density of an aluminum bar. The density of an aluminumum bar and the partial derivative of the aluminium bar can be calculated as follows: 
+		
+		 \begin{small}
+		 \begin{equation}
+		 \rho = \frac{m}{V} =\frac{\overline{m}}{(\overline{l}*\overline{w}*\overline{h})}
+		\end{equation}
+		 \end{small}
+	 
+		\begin{small}
+	 	\begin{equation}
+	 	d \rho = \pdv{\rho}{m} dm + \pdv{\rho}{l} dl + \pdv{\rho}{w} dw + \pdv{\rho}{h} dh,
+	 	\end{equation}
+		\end{small}
+	 
+	 \noindent where $\overline{m}$, $\overline{l}$, $\overline{w}$ and $ \overline{h}$ represent the average of the set of respective values recorded. In part two of the experiment, equations (1), (2) and (3) will be used in the evaluation of a DC circuit. The circuit is organized with two resistors set up in parallel. The equations that will be used to evaluate the parallel circuit are: 
+	 
+	 	\begin{small}
+	 	\begin{equation}
+		V_{Total} = I_{Total} * R_{Total} 
+	 	\end{equation}
+		 \end{small}
+	 		
+	 	\begin{small}
+	 	\begin{equation}
+	 	\frac{1}{R_{Total}} = \frac{1}{R_1} + \frac{1}{R_2} + ... + \frac{1}{R_n}  \quad n \in \mathbb{R^+}
+	 	\end{equation}
+	 	\end{small}
+ 	
+ 		\begin{small}
+ 		\begin{equation}
+ 		I_{Total} = I_1 + I_2 + ... + I_n \quad n \in \mathbb{R^+},
+ 		\end{equation}
+ 		\end{small}
+ 	
+ 	\noindent where $V_{Total}$, $I_{Total}$, and $R_{Total}$ represent the total voltage, current and resistance of the circuit. The concluding section of the error and analysis experiment will assess the error associated with calculations involving an oscillating electromotive force, specifically an AC current. Additional equations that will be used to evaluate the AC current are:
+ 	
+ 		
+ 		\begin{small}
+ 		\begin{equation}
+		\epsilon_{rms} = \frac{\epsilon_{m}}{\sqrt{2}},
+ 		\end{equation}
+ 		\end{small}
+ 	
+ 	\noindent where $\epsilon{rms}$ is equivalent to the root mean square of the voltage and $\epsilon_m$ is the measured voltage (amplitude) given by the oscilloscope. 
+ 	
+ 	\indent Conceptually, the measurement and error analysis experiment will offer insight to the error that is associated with physical, non-digital lenth measuring devices and electronic, signal measuring devices. 
+	%----------------------------------------------------------------------------------------
+	%	EXPERIMENTAL PROCEDURE
+	%----------------------------------------------------------------------------------------
+		
+		\section{Experimental Procedure}
+		The experiment was subdivided into three separate procedural sections that were conducted in sequence as described below. 	
+		
+		\subsection{Density Measurements}
+		The density of an aluminum bar was calculated by measuring the mass, length, width and height of the bar. The mass of the bar was taken three times with a table top scale and recorded in grams. The length, width and height of the bar were measured three times using a Vernier Caliper and recorded in centimeters. The width and height were measured three additional times using a micrometer and recorded in milimeters. The length mesaurements taken by the Vernier Caliper were used in place of the micrometer length measurements, due to the length limitation of the micrometer. 
+		
+		\indent The numerical data, including the uncertianty associated with each measurement due to the measurement device, were recorded in table. The density was calculated using equation (4), and the propogation of error was calculated using equation (1). The percent error between the calculated and accepted value of the density was calculated using equation (2). 
+		
+		\subsection{DC Measurements}
+		A DC digital power supply (model: EA Elektro automatik gmbh) was set to output 5 volts. The power output was measured with two different multimeters ( a black, BK Tool Kit 2706 and a yellow Protek 608). The percent difference between the two multimeter readings was calculated using equation (3). The most precise multimeter was used for the rest of the DC measurements. 
+		
+		\indent Two coil resistors were taken from the lab and their respective resistances were measured and recorded with the digital multimeter. The two resistors were then set up in a parallel circuit using assorted wires and alligator clips, with the DC power supply acting as the power source as shown below.
+		
+		\begin{center}
+		\includegraphics[width=0.5\columnwidth]{circuit (1).png}
+		\end{center}
+		
+		 The value of the current at point A was measured using the multimeter, then the total current flowing through the circuit was calculated using the measured current in each resistor. The total resistance was calculated by using the individual resistances of the resistors, and again by using the measured values of the total current and potential difference with the multimeter. The error propogation and percent difference between the respective measured and calculated values were calculated using equations (1) and (3). 
+
+		
+		\subsection{Oscilloscope Measurements}
+		An oscilloscope (Tektronix TBS 1072B - EDU) was calibrated by connecting a 1:1 probe to the oscilloscope's input 1, specifically connecting the probe's tip to the oscilloscope's calibration signal and the probe's ground clip to the oscilloscope ground. The oscilloscope was turned on and set to graph input 1. Then, the attenuation set to 1X and the horizontal and vertical scale, the trigger and the trace positions were adjusted until the wave is no longer moving. The wave appeared squared off, not curved. We confirmed that the measured signal matched the calibration signal. 
+		
+		\indent A signal generator (BK Precision 4011A 5MHz Function Generator) was set to output a sinusoidal signal with a frequency of 2000 Hz and an amplitude of 2V. The voltage was then measured with two multimeters, a black BK Took Kit 2706 and a yellow Protek 608. The signal generator's output was connected to the oscilloscope's input and the signal was stabilized. The maximum voltage and period of the signal were measured by eye, and the error associated due to parallax was recorded. The root mean square of the voltage was calculated using equation (9) and the frequency was calculated from the measured value and compared to the signal generator's value. The signal generator was then set to frequencies of 200 Hz and 20 kHz, and the voltage, period, associated error, root mean square and frequency were all calculated as done for during the frequency setting of 2000 Hz. 
+		
+	%----------------------------------------------------------------------------------------
+	%	RESULTS, ANALYSIS AND DISCUSSION
+	%----------------------------------------------------------------------------------------
+		\section{Results, Analysis, Discussion}
+		\subsection{Density Measurements}
+		We used the data taken for the volume of the aluminum bar (found in Table 1 and Table 2), and calculated the mean values for each variable. The volume of the bar was then calculated using equation (4), and the uncertianty in the calculated value of the volume was determined by using equation (5). The calculated value for the volume was then compared to the accepted value for the volume of an aluminum bar, and the percentage error between the two values was calculated using equation (2).The uncertianty used in the calculations for the Vernier Caliper measurements was 0.002cm. The error attributed to this part of the experiment is partially due to parallax, or the discrepency in judgement when determining the value of a measured object. 
+		
+		
+		\begin{table}[H]
+			\centering
+			\begin{tabular}{l c c rrrrrrr}
+				\hline \hline
+				 & Trial 1 & Trial 2 & Trial 3 \\ [1ex]
+				\hline
+				\multirow{2}{*}{Mass(g)} & \multirow{2}{*}{\(5.29 \pm 0.01\)} & \multirow{2}{*}{\(5.29 \pm 0.01\)} &\multirow{2}{*}{\(5.29 \pm 0.01\)} \\ [1.5ex]
+				\hline
+			\end{tabular}
+		\caption{The mass of the aluminum bar in grams.}
+		\end{table}
+		
+\begin{table}[H]
+	\centering
+	\begin{tabular}{lrrrrr}
+			\hline \hline
+		Trial   &   Device    &   \multicolumn{3}{c}{Length \hspace{5mm} Width \hspace{5mm} Height}  \\[1ex]
+		\hline
+		\multirow{2}{*}{1} & Caliper & 10.030 cm  & 1.518 cm  & 1.272 cm \\
+		& Micrometer &  & 15.11 mm  & 12.5 mm \\ [1.5ex]
+		\multirow{2}{*}{2} & Caliper & 10.036 cm & 1.520 cm & 1.272 cm\\
+		& Micrometer &  & 15.10 mm & 12.5 mm\\ [1.5ex]
+		\multirow{2}{*}{3} & Caliper & 10.020 cm & 1.516 cm & 1.276 cm\\
+		& Micrometer &  & 15.13 mm & 12.5 mm\\ [1.5ex]
+		\hline
+	\end{tabular}
+	\caption{The length, width, and height measured by two devices, a Vernier Caliper and a Micrometer.}
+\end{table}
+
+		
+		\subsection{DC Measurements}
+			We took the set voltage and the measured values for resistor 1 and resistor 2, shown in Table 3, and used them to calculate the total current flowing through each respective resistor, $I_{AC}$. The calculated total current was then compared to the measured total current, shown in Table 4, and the percent difference between the two values was calcuated using equation (3). The total resistance was then calculated from the individual resistors, and we used equation (5) to determine the error associated with the calculation. The error attributed to this part of the experiment is due to the variation in quality of each multimeter brand, and some error is inherently attributed to the calculations due to the quality of the manufacturing of the multimeters. 
+	
+	
+				\begin{table}[H]
+			\centering
+			\begin{tabular}{l c c rrrrrrr}
+				\hline \hline
+				& Resistor 1 & Resistor 2 \\ [1ex]
+				\hline
+				Measured & 99.2 $\pm$ 0.1 $\Omega$ & 470 $\pm$ 0.1 $\Omega$ \\
+				Actual & 100 $\Omega$  & 470 $\Omega$ \\ [1.5ex]
+				\hline
+			\end{tabular}
+			\caption{Measured and actual values for resistor one and two.}
+		\end{table}
+		
+			\begin{table}[H]
+			\centering
+			\begin{tabular}{l c c rrrrrrr}
+				\hline \hline
+				& Current at Point A \\ [1ex]
+				\hline
+				$\text{I}_{AM}$ & 0.05 $\pm$ 0.01 Amps \\ [1.5ex]
+				\hline
+			\end{tabular}
+			\caption{Measured current at point A in the circuit.}
+		\end{table}
+				
+					
+		
+		\subsection{Oscilloscope Measurements}
+		We set the signal generator to three frequencies and measured the values for amplitude (maximum voltage) and period of the signal, shown in Table 5. The frequency was calculated using the measured values for the maximum voltage and the period and the percent difference between the two values was calculated using equation (3). The error attributed to this part of the experiment is due to parallax when trying to determine the value for the period on the display screen of the function generator. 
+
+	\begin{table}[H]
+	\centering
+	\begin{tabular}{l c c rrrrrrr}
+		\hline \hline
+		 Frequency & Voltage (V$_m$) & Period \\ [1ex]
+		\hline
+		20 kHz & $2088 \pm 1 mV$ & $50 \pm 0.1 ms$ \\ [1.5ex]
+		200 Hz & $2112 \pm 1 mV$ & $10 \pm 0.1 ms$  \\ [1.5ex]
+		2000 Hz & $6.00 \pm 0.20 V$ & $500 \pm 0.10 \mu s$ \\ [1.5ex]
+		\hline
+	\end{tabular}
+	\caption{Maximum voltage and period for three different frequencies set by the function generator.}
+\end{table}
+		
+	%----------------------------------------------------------------------------------------
+	%	CONCLUSIONS
+	%----------------------------------------------------------------------------------------
+		\section{Conclusion}
+		
+		The motivation for this experiment was to gain familiarity with tools that are commonplace in a physics laboratory and establish an understanding of the error that is associated with each tool. The density of an aluminum bar was measured to be 2.73 $\pm$ 0.002 $g/cm^3$ with a Vernier Caliper and 2.79 $\pm$ 0.021 $g/cm^3$ with a micrometer. The current and resistance of a circuit were measured to be 0.05 $\pm$ 0.01 A, 100 $\pm$ 0.01 $\Omega$ with a multimeter. The voltage and frequency of a signal generator were measured to be 2.112 $\pm$ 0.001 V,100 $\pm$ $1 \times10^4$ Hz with an oscilloscope. 
+		
+		\indent The error most commonly attributed to each part of the experiment was parallax, or the discrepency on a measured value due to an observer's position or perspective. Additionally, error was found to be relative based on the brand or model type of each measuring device; no two different models of a measuring device may report with the same accuracy and precision. 
+		
+		
+		
+		
+	%	REFERENCE LIST
+	%----------------------------------------------------------------------------------------
+		\begin{thebibliography}{99} % Bibliography - this is intentionally simple in this template
+	
+	\bibitem[1]{2001}
+	Department of Physics. "Lab Manual for Advanced Laboratory I, Phys 3313". Lab Handbook. The University of Houston. Houston, Texas. n.d.Print.
+	
+
+	
+\end{thebibliography}
+		
+	%----------------------------------------------------------------------------------------
+		
+	\end{multicols}
+	
+\end{document}

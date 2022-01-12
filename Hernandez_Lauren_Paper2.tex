@@ -1,0 +1,197 @@
+\documentclass[twoside,10pt]{article}
+
+\usepackage[labelsep=period,textfont=it]{caption}
+\captionsetup[table]{name=TABLE}
+\renewcommand{\thetable}{\Roman{table}}
+\usepackage{lipsum,booktabs}
+\usepackage[super]{natbib}
+\usepackage{lipsum} % Package to generate dummy text throughout this template
+\usepackage[sc]{mathpazo} % Use the Palatino font
+\usepackage[T1]{fontenc} % Use 8-bit encoding that has 256 glyphs
+\linespread{1.00} % Line spacing - Palatino needs more space between lines
+\usepackage{microtype} % Slightly tweak font spacing for aesthetics
+\usepackage{derivative}
+\usepackage[hmarginratio=1:1,top=32mm,columnsep=20pt]{geometry} % Document margins
+\usepackage{multicol} % Used for the two-column layout of the document
+%\usepackage[hang, small,labelfont=bf,up,textfont=it,up]{caption} % Custom captions under/above floats in tables or figures
+\usepackage{booktabs} % Horizontal rules in tables
+\usepackage{float} % Required for tables and figures in the multi-column environment - they need to be placed in specific locations with the [H] (e.g. \begin{table}[H])
+\usepackage{hyperref} % For hyperlinks in the PDF
+\usepackage{multirow}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{lettrine} % The lettrine is the first enlarged letter at the beginning of the text
+\usepackage{paralist} % Used for the compactitem environment which makes bullet points with less space between them
+
+\usepackage{abstract} % Allows abstract customization
+\renewcommand{\abstractnamefont}{\normalfont\bfseries} % Set the "Abstract" text to bold
+\renewcommand{\abstracttextfont}{\normalfont\small\itshape} % Set the abstract itself to small italic text
+
+\usepackage{titlesec} % Allows customization of titles
+\renewcommand\thesection{\Roman{section}} % Roman numerals for the sections
+\renewcommand\thesubsection{\Roman{subsection}} % Roman numerals for subsections
+\titleformat{\section}[block]{\large\scshape\centering}{\thesection.}{1em}{} % Change the look of the section titles
+\titleformat{\subsection}[block]{\large}{\thesubsection.}{1em}{} % Change the look of the section titles
+
+\usepackage{fancyhdr} % Headers and footers
+\pagestyle{fancy} % All pages have headers and footers
+\fancyhead{} % Blank out the default header
+\fancyfoot{} % Blank out the default footer
+\fancyhead[C]{Approximating the Radius of the Earth $\bullet$ October 10, 2021 } % Custom header text
+\fancyfoot[RO,LE]{\thepage} % Custom footer text
+
+
+%----------------------------------------------------------------------------------------
+%	TITLE SECTION
+%----------------------------------------------------------------------------------------
+
+\title{\vspace{-15mm}\fontsize{15pt}{10pt}\selectfont\textbf{Approximating the Radius of the Earth}} % Article title
+
+\author{
+	\small
+	\textsc{Lauren Hernandez, Kathryn Wong}\\[1mm] % Your name
+	\normalsize \textit{University of Houston}\\ % Your institution
+	\normalsize \textit{Physics 3313: Advanced Laboratory I}\\ % Your Course
+%	\normalsize \href{mailto:john@smith.com}{john@smith.com} % Your email address
+	\vspace{-10mm}
+}
+\date{}
+
+%----------------------------------------------------------------------------------------
+
+\begin{document}
+	
+	\maketitle % Insert title
+	
+	\thispagestyle{fancy} % All pages have headers and footers
+	
+	%----------------------------------------------------------------------------------------
+	%	ABSTRACT
+	%----------------------------------------------------------------------------------------
+	
+	\begin{abstract}
+		
+		\noindent This experiment attempts to measure the radius of the Earth in an outdoor setting, and without the use of high-tech tools. The radius of the Earth was approximated to be 5164.37 km $\pm$ 78.50 km., by taking incremental measurements of a shadow cast by a suspended mass at solar noon. The experiment was conducted in close proximity to the 2021 fall equinox in order to increase the accuracy of our data. 
+		
+	\end{abstract}
+	
+	%----------------------------------------------------------------------------------------
+	%	INTRODUCTION
+	%----------------------------------------------------------------------------------------
+	
+	\begin{multicols}{2} % Two-column layout throughout the main article text
+		
+		\section{Introduction} 
+		\lettrine[nindent=0em,lines=2]{T}he inclination to determine the size of the Earth originates with the early philosophers and scientists of ancient Greece. Limitations in technology did not hinder the ability of early scientists to approximate to great accuracy the radius of the Earth. Instead, simple and thoughtfully timed trigonometric measurements cast by shadows from the sun were used to determine the size of the Earth. Later on, the determined value for the radius of the Earth was used in Sir Isaac Newton's theory of The Law of Universial Gravitation. 
+		
+		\indent The goal of this experiment is to replicate, with most accuracy, the measurement of the radius of the Earth by means of trigonometric shadow measurements cast by a suspended mass. Additionally, the idea is to introduce physics students to performing experiments outside of a laboratory setting, and without advanced, high-tech equipment. Conducting an experiment outdoors, subject to the unpredictability of the environment, encourages creativity, spontaneity and exposure to the variability in real-world data collection and observation. 
+		
+		\indent The radius of the Earth is calculated by manipualing the arclength equation as shown below in equations (1) and (2):
+		
+		\begin{equation}
+		s = r\hspace{.5mm}\theta 
+		\end{equation}
+
+		\begin{equation}
+		r = \frac{s}{\theta},
+		\end{equation}
+		
+		\noindent where s represents the arclength of the Earth, r represents the radius of the Earth, and $\theta$ represents the angle opposite the arclength, adjacent to the radius. The angle $\theta$ has a complementary angle $\phi$, which is what is calculated from the measurements in the experiment as shown below in equation (3):
+		
+		\begin{equation}
+			\phi = \tan^{-1} \biggl( \frac{x}{h} \biggl)= \theta,
+		\end{equation}
+		
+		where the values for $psi$ and $\theta$ are the same angle, x represents the shadow cast by the mass, and h represents the height of the mass. Once the values for s and $\theta$ are known, then the radius of the Earth can be calculated using equation (2), and the percent difference between the calculated value of the radius of the Earth and the accepted value of the radius of the Earth can be calculated using the following equation:
+		
+		\begin{small}
+		\begin{equation}
+		\textnormal{percentage difference} = \frac{| x_{1} - x_{2}|}{|x_1 + x_2|/2} * 100 \% .
+		\end{equation}
+		\end{small}
+	%----------------------------------------------------------------------------------------
+	%	EXPERIMENTAL PROCEDURE
+	%----------------------------------------------------------------------------------------
+		
+		\section{Experimental Procedure}
+		
+		\indent In order to conduct the experiment and gather measurements, we used an unlabeled lab stand, two small metal rods, two metal clamps, two strings, a Staedtler metal ruler, a screw eye hook as our mass, and an application called Bubble Level. 
+
+		\indent Prior to experimentation, we selected a day within close range to the fall equinox, being two days after the fall equinox, and we began experimentation set-up twenty minutes prior to solar noon. Before laying out equipment, we walked around campus and found a location that was exposed to direct sunlight with minimal wind exposure. We then used the Bubble Level app to find a precise location in that area that was level, and placed the lab stand at that location. We attached the two metal rods to the lab stand using the two metal clamps to where the metal rods were aligned perpendicularly with the intersecting rod at the top of the vertical rod and the lab stand at the base of the vertical rod. We then tied both strings to the end of the rod that was suspended atop the vertical rod. We tied one string to the screw eye hook and suspended it just above the ground, level with the base of the lab stand. The second string was used to mark the top of the shadow cast by the screw eye hook. On that specific day, soar noon occurred at 1:13 pm. We took a total of five measurements of the shadow cast by the suspended screw eye hook, one measurement per minute starting at 1:11 pm and ending at 1:15 pm. We used the ruler when measuring the distance from the center of the screw eye hook to the top of the shadow cast by the screw eye hook. 
+
+		
+
+		
+	%----------------------------------------------------------------------------------------
+	%	RESULTS, ANALYSIS AND DISCUSSION
+	%----------------------------------------------------------------------------------------
+		\section{Results, Analysis, Discussion}
+		
+		Data collection began precisely at 1:11pm, with a total of five distances of the shadow cast by the suspended mass recorded each minute as shown in Table 1. 
+		
+			\begin{table}[H]
+			\centering
+			\caption{The shadow cast by the suspended mass meausred every minute over a five minute interval.}
+			\begin{tabular}{l c c rrrrrrr}
+				\toprule				
+				Time & Distance of Shadow Cast (mm) \\ [1ex]
+				\midrule
+				1:11 pm & $6.4 \pm 0.1 $  \\ [1.5ex]
+				1:12 pm & $6.5 \pm 0.1$  \\ [1.5ex]
+				1:13 pm & $6.5  \pm 0.1 $ \\ [1.5ex]
+				1:14 pm & $6.5 \pm 0.1$ \\ [1.5ex]
+				1:15 pm & $6.5 \pm 0.1$ \\ [1.5ex]
+				\bottomrule
+			\end{tabular}
+		\end{table}
+					
+		During data collection, there was a mild wind with no overcast; however, the measurements recorded have an error in precision due to inaccuracy when aligning the string with the exact top of the shadow cast, and due to parallax when determining the final measurement of the distance. 
+
+		\indent The Azimuthal Equidistant Projection Map was used to calculate the arc length of the Earth by means of proportionality, with the scale of the map measuring to be approximately 11.9 $\pm0.1$ cm : 3100 km.$^{2,3}$ This ratio was used to calculate the real-scale arc length of the Earth (in kilometers) using the distance from Houston, Texas to the Equator. The arc length, s, was calculated to be 2943.69 km. 
+		
+		\indent  The height of the screw eye hook had to be calculated with a proportion, because we measured the entire length of the string and the mass, rather than just measuring the suspended mass. We had a photo of the string-mass system and we used this to create a scale and calculate the height of the screw eye hook as shown below in the following calculation:
+		
+		\begin{gather*} 	
+			\alpha_1 = \frac{\alpha_2 \beta_1}{\beta_2} = \frac{1.5 \text{mm} \cdot 45.133 \text{mm}}{6.7 \text{mm}} = 10.105 \text{mm},
+		\end{gather*}
+		
+		where $\alpha_1$ and $\alpha_2$ are the height of the screw in real life, and the height of the screw in the photo and $\beta_1$ and $\beta_2$ are the height of the string and screw in real life, and the height of the string and screw in the photo. The value of $\theta$ was calculated for each time increment using equation (3), resulting in $\bar{\theta} = 0.57 \pm 0.01$ radians.  The radius of the Earth was calculated to be 5164.37 km $\pm$ 78.50 km. The accepted value of the radius of the Earth is 6357 km, and the percent difference between the calculated and accepted value of the radius of the Earth was 21\%. $^4$
+		
+		\indent The percent difference between the calculated and accepted value of the radius of the Earth is greater than the desired ~10\% difference is due to a few limitations and errors during the experiment. The experiment was conducted two days after the fall equinox, which contributes to an error in the approximation of the radius. There was a slight wind present during experimentation, which slightly moves the suspended mass and contributes to an error in the measurement of the shadow cast by the suspended mass. 
+	%----------------------------------------------------------------------------------------
+	%	CONCLUSIONS
+	%----------------------------------------------------------------------------------------
+		\section{Conclusion}
+		
+		The intention behind approximating the radius of the Earth was to expose physics students to experimentation outside of a formal laboratory setting and to incite ingenuity when conducting experiments in unpredectible environments. Further, the goal of this experiment was to calculate the radius of the Earth within 10\% of the accepted value by methods performed without the use of modern, high-tech equipment. 
+		
+		\indent The radius of the Earth was calculated to be 5164.37 km $\pm$ 78.50 km., which is within 21\% of the accepted value. Various errors during data collection can be attributed to wind, parallax while determining the distance, data gathering occuring two days past the fall equinox, and indirect measurement of the height of the suspended mass. 
+		
+		
+		
+	%	REFERENCE LIST
+	%----------------------------------------------------------------------------------------
+		\begin{thebibliography}{99} % Bibliography - this is intentionally simple in this template
+	
+	\bibitem[1]{2001}
+	Ulinski, A. \& Forrest, R. L., "Lab Manual for Advanced Laboratory I", Physics 3313, pages 7–11 (The University of Houston, 2021).
+	
+	\bibitem[2]{2000}
+	AZ\_PROJ at WM7D: \textit{Azimuthal Equidistant (Great Circle) Projection Map Server (Postscript) by NA3T and NV3Z.} (n.d). (Retreived 10th October 2021) 
+	
+	\bibitem[3]{2003}
+	\textit{Long Form for AZ\_PROJ.} (n.d). (Retreived 10th October 2021)
+	
+	\bibitem[4]{2004}Imagine the universe! NASA (Retreived 10th October 2021) 
+
+
+	
+\end{thebibliography}
+		
+	%----------------------------------------------------------------------------------------
+		
+	\end{multicols}
+	
+\end{document}
